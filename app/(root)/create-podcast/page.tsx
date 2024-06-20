@@ -26,6 +26,9 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { cn } from "@/lib/utils"
+import GeneratePodcast from "@/components/GeneratePodcast"
+import GenerateThumbnail from "@/components/GenerateThumbnail"
+import { Loader } from "lucide-react"
 
 //voice catgerories
 const voiceCategories = ['alloy', 'shimmer', 'nova', 'echo', 'fable', 'onyx'];
@@ -38,10 +41,22 @@ const formSchema = z.object({
 
 const CreatePodcast = () => {
   const [voiceType, setVoiceType] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [imagePrompt, setImagePrompt] = useState('');
+  const [imageStorageId, setImageStorageId] = useState<Id<"_storage"> | null>(null)
+  const [imageUrl, setImageUrl] = useState('');
+  
+  const [audioUrl, setAudioUrl] = useState('');
+  const [audioStorageId, setAudioStorageId] = useState<Id<"_storage"> | null>(null)
+  const [audioDuration, setAudioDuration] = useState(0);
+
+  const [voicePrompt, setVoicePrompt] = useState('');
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      podcastTitle: "",
+      podcastDescription: "",
     },
   })
  
@@ -110,10 +125,30 @@ const CreatePodcast = () => {
         />
         </div>
         <div className="flex flex-col pt-10">
-          GeneratePodcast
-          GenerateThumbnail
+          <GeneratePodcast
+             setAudioStorageId={setAudioStorageId}
+             setAudio={setAudioUrl}
+             voiceType={voiceType!}
+             audio={audioUrl}
+             voicePrompt={voicePrompt}
+             setVoicePrompt={setVoicePrompt}
+             setAudioDuration={setAudioDuration}
+          />
+
+          <GenerateThumbnail />
+          <div className="mt-10 w-full">
+          <Button type="submit" className="text-16 w-full bg-orange-1 py-4 font-extrabold text-white-1 transition-all duration-500 hover:bg-black-1">
+                  {isSubmitting ? (
+                    <>
+                      Submitting
+                      <Loader size={20} className="animate-spin ml-2" />
+                    </>
+                  ) : (
+                    'Submit & Publish Podcast'
+                  )}
+                </Button>
+          </div>
         </div>
-        <Button type="submit">Submit</Button>
       </form>
     </Form>
     </section>
