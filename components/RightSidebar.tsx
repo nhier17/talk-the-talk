@@ -1,17 +1,17 @@
 'use client';
 
-import React from 'react';
+import { SignedIn, UserButton, useUser } from '@clerk/nextjs'
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { cn } from '@/lib/utils';
-import { SignedIn, UserButton, useUser } from '@clerk/nextjs'
-import LoaderSpinner from './LoaderSpinner';
-import { useQuery } from 'convex/react';
-import { api } from '@/convex/_generated/api';
+import React from 'react'
 import Header from './Header';
 import Carousel from './Carousel';
+import { useQuery } from 'convex/react';
+import { api } from '@/convex/_generated/api';
+import { useRouter } from 'next/navigation';
+import LoaderSpinner from './LoaderSpinner';
 import { useAudio } from '@/providers/AudioProvider';
+import { cn } from '@/lib/utils';
 
 
 const RightSidebar = () => {

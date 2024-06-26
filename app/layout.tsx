@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
-import ConvexClerkProvider from "./providers/ConvexClerkProvider";
+import ConvexClerkProvider from "../providers/ConvexClerkProvider";
+import AudioProvider from "@/providers/AudioProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Talk the Talk",
@@ -19,12 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ConvexClerkProvider>
     <html lang="en">
-      <body suppressHydrationWarning={true} className={inter.className}>
-        <ConvexClerkProvider>
+    <AudioProvider>
+      <body suppressHydrationWarning={true} className={manrope.className}>
         {children}
-        </ConvexClerkProvider>
         </body>
+        </AudioProvider>
     </html>
+    </ConvexClerkProvider>
   );
 }
