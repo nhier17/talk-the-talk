@@ -11,15 +11,21 @@ import { useQuery } from 'convex/react';
 import { api } from '@/convex/_generated/api';
 import Header from './Header';
 import Carousel from './Carousel';
+import { useAudio } from '@/providers/AudioProvider';
 
 
 const RightSidebar = () => {
     const router = useRouter();
     const { user } = useUser();
+    const { audio } = useAudio();
     const topPodcasters = useQuery(api.users.getTopUserByPodcastCount);
 
+    if(!topPodcasters) return <LoaderSpinner />
+
   return (
-    <section className='right_sidebar'>
+    <section className={cn('right_sidebar h-[calc(100vh-5px)]', {
+      'h-[calc(100vh-140px)]': audio?.audioUrl
+    })}>
       <SignedIn>
         <Link href={`/profile/${user?.id}`} className="flex gap-3 pb-12">
         <UserButton />
@@ -34,10 +40,15 @@ const RightSidebar = () => {
         </div>
         </Link>
        </SignedIn> 
+       <section>
+       <Header headerTitle="Fans Like You" />
+       <Carousel fansLikeDetail={topPodcasters!}/>
+       </section>
        <section className="flex flex-col gap-8 pt-12">
        <Header headerTitle="Top Podcastrs" />
       <div className="flex flex-col gap-6">
       {topPodcasters?.slice(0,3).map((podcaster) => (
+        <div key={podcaster._id} className="flex cursor-pointer justify-between" onClick={() => router.push(`/profile/${podcaster.clerkId}`)}>
         <figure className="flex items-center gap-2">
           <Image
             src={podcaster.imageUrl}
@@ -51,6 +62,7 @@ const RightSidebar = () => {
            <div className="flex items-center">
            <p className="text-12 font-normal text-white-1">{podcaster.totalPodcasts} podcasts</p>
          </div> 
+         </div>
       ))}
       </div>
        </section>

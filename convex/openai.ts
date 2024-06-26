@@ -39,7 +39,7 @@ export const generateThumbnailAction = action({
     if(!url) {
       throw new Error('Error generating thumbnail');
     }
-
+;n 
     const imageResponse = await fetch(url);
     const buffer = await imageResponse.arrayBuffer();
     return buffer;
