@@ -1,12 +1,11 @@
-"use client";
+'use client'
+
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-
 import { formatTime } from "@/lib/formatTime";
 import { cn } from "@/lib/utils";
 import { useAudio } from "@/providers/AudioProvider";
-
 import { Progress } from "./ui/progress";
 
 const PodcastPlayer = () => {
@@ -80,9 +79,10 @@ const PodcastPlayer = () => {
       }
     } else {
       audioElement?.pause();
-      setIsPlaying(true);
+      setIsPlaying(false);
     }
   }, [audio]);
+
   const handleLoadedMetadata = () => {
     if (audioRef.current) {
       setDuration(audioRef.current.duration);
@@ -99,11 +99,13 @@ const PodcastPlayer = () => {
         hidden: !audio?.audioUrl || audio?.audioUrl === "",
       })}
     >
-      <Progress
-        value={(currentTime / duration) * 100}
-        className="w-full"
-        max={duration}
-      />
+      {duration > 0 && (
+        <Progress
+          value={(currentTime / duration) * 100}
+          className="w-full"
+          max={duration}
+        />
+      )}
       <section className="glassmorphism-black flex h-[112px] w-full items-center justify-between px-4 max-md:justify-center max-md:gap-5 md:px-12">
         <audio
           ref={audioRef}
