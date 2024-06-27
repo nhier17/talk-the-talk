@@ -24,7 +24,7 @@ To set up the Podcast Generator App locally, follow these steps:
 
    ```bash
    git clone https://github.com/nhier17/talk-the-talk.git
-   cd podcast-generator-app
+   cd talk-the-talk
 ### Install the dependencies:
 npm install
 
@@ -70,3 +70,18 @@ Real-time content management is facilitated by Convex. Ensure your Convex API ke
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Author: Abraham Nhier
+
+## Contact Information;
+      Email: abrahamnhier97@gmail.com
+      Phone: +254716903151
+
+## Technology Used 
+      1. Typescript
+      2. Nextjs
+      3. Convex
+      4. Tailwind css
+
+ ## Framework used
+       Git
