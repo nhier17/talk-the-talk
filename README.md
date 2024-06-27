@@ -31,11 +31,11 @@ npm install
 ### Set up environment variables:
 Create a .env.local file in the root directory and add your environment variables:
 
-NEXT_PUBLIC_CLERK_FRONTEND_API=<your-clerk-frontend-api>
-CLERK_API_KEY=<your-clerk-api-key>
-OPENAI_API_KEY=<your-openai-api-key>
-CONVEX_API_KEY=<your-convex-api-key>
-Run the development server:
+   NEXT_PUBLIC_CLERK_FRONTEND_API=<your-clerk-frontend-api>
+   CLERK_API_KEY=<your-clerk-api-key>
+   OPENAI_API_KEY=<your-openai-api-key>
+   CONVEX_API_KEY=<your-convex-api-key>
+   Run the development server:
 
 npm run dev
 
