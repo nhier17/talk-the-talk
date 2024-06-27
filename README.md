@@ -25,10 +25,10 @@ To set up the Podcast Generator App locally, follow these steps:
    ```bash
    git clone https://github.com/your-username/podcast-generator-app.git
    cd podcast-generator-app
-Install the dependencies:
+### Install the dependencies:
 npm install
 
-Set up environment variables:
+### Set up environment variables:
 Create a .env.local file in the root directory and add your environment variables:
 
 NEXT_PUBLIC_CLERK_FRONTEND_API=<your-clerk-frontend-api>
