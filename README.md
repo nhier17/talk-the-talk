@@ -23,7 +23,7 @@ To set up the Podcast Generator App locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/podcast-generator-app.git
+   git clone https://github.com/nhier17/talk-the-talk.git
    cd podcast-generator-app
 ### Install the dependencies:
 npm install
@@ -38,6 +38,33 @@ CONVEX_API_KEY=<your-convex-api-key>
 Run the development server:
 
 npm run dev
+
+## Dependencies
+This project relies on several key technologies to deliver a powerful and efficient user experience:
+
+Convex: For real-time database and state management.
+Clerk/Next.js: For secure and user-friendly authentication.
+Shadcn: For modern and responsive UI components.
+OpenAI: For AI-driven podcast and thumbnail generation.
+Next.js: For robust server-side rendering and static site generation.
+
+## Usage
+### Generating a Podcast
+Sign up / Sign in: Create an account or log in using the Clerk-powered authentication system.
+Create a Podcast: Enter the necessary details and let OpenAI generate the podcast content for you.
+Generate Thumbnails: Create custom thumbnails for your podcasts using OpenAI's capabilities.
+Manage Content: View, edit, and manage your podcasts through your user dashboard.
+
+## API
+### Authentication
+Clerk handles all authentication processes. Make sure your Clerk API keys are correctly set up in your .env.local file.
+
+### Podcast Generation
+Endpoints for generating podcasts and thumbnails are powered by OpenAI. Ensure your OpenAI API key is configured in your .env.local file.
+
+### Real-time Database
+Real-time content management is facilitated by Convex. Ensure your Convex API key is included in your .env.local file.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
