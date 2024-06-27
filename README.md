@@ -1,7 +1,15 @@
-# Project Name: Talk the talk
+# Talk the talk
 
 ## Project Description
-Welcome to the Podcast Generator App, a cutting-edge fullstack application designed to revolutionize podcast creation. Leveraging the power of OpenAI, users can effortlessly generate high-quality podcasts and custom thumbnails. This app also features seamless user authentication and real-time content management, providing an all-in-one solution for podcast enthusiasts and creators.
+Talk the talk is  a cutting-edge fullstack application designed to revolutionize podcast creation. Leveraging the power of OpenAI, users can effortlessly generate high-quality podcasts and custom thumbnails. This app also features seamless user authentication and real-time content management, providing an all-in-one solution for podcast enthusiasts and creators.
+
+## Features
+- **AI-Powered Podcast Generation:** Create engaging podcasts with the help of OpenAI's advanced natural language processing capabilities.
+- **Custom Thumbnail Creation:** Generate visually appealing thumbnails tailored to your podcasts using OpenAI.
+- **User Authentication:** Secure and intuitive user sign-up and login powered by Clerk.
+- **Real-Time Content Management:** Efficiently manage your podcasts and associated data with real-time updates using Convex.
+- **Responsive Design:** Enjoy a seamless user experience across all devices with the beautifully designed Shadcn UI components.
+- **Easy Deployment:** Utilize Next.js for efficient server-side rendering and static site generation.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
