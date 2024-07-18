@@ -8,6 +8,7 @@ import { api } from '@/convex/_generated/api'
 import PodcastDetailsPlayer from '@/components/PodcastDetailsPlayer'
 import LoaderSpinner from '@/components/LoaderSpinner'
 import EmptyState from '@/components/EmptyState'
+import PodcastCard from '@/components/PodcastCard'
 
 const PodcastDetails = ({ params: { podcastId } }: { params: { podcastId: Id<'podcasts'> } }) => {
   const { user } = useUser();
