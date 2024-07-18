@@ -29,9 +29,9 @@ export const generateThumbnailAction = action({
     const response = await openai.images.generate({
       model: 'dall-e-3',
       prompt,
+      n: 1,
       size: '1024x1024',
       quality: 'standard',
-      n: 1,
     })
 
     const url = response.data[0].url;

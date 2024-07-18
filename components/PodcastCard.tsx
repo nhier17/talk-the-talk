@@ -7,7 +7,7 @@ import { PodcastCardProps } from '@/types';
 
 
 const PodcastCard = ({
-    imageUrl, title, description, podcastId
+    imgUrl, title, description, podcastId
   }: PodcastCardProps) => {
     const router = useRouter();
 
@@ -21,7 +21,7 @@ const PodcastCard = ({
     <div className="cursor-pointer" onClick={handleViews}>
         <figure className="flex flex-col gap-2">
         <Image 
-          src={imageUrl}
+          src={imgUrl}
           width={174}
           height={174}
           alt={title}
