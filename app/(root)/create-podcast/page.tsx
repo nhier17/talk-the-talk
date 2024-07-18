@@ -43,10 +43,7 @@ const formSchema = z.object({
 
 
 const CreatePodcast = () => {
-  const { toast } = useToast()
-const router = useRouter();
-  const [voiceType, setVoiceType] = useState<string | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter()
   const [imagePrompt, setImagePrompt] = useState('');
   const [imageStorageId, setImageStorageId] = useState<Id<"_storage"> | null>(null)
   const [imageUrl, setImageUrl] = useState('');
@@ -54,9 +51,16 @@ const router = useRouter();
   const [audioUrl, setAudioUrl] = useState('');
   const [audioStorageId, setAudioStorageId] = useState<Id<"_storage"> | null>(null)
   const [audioDuration, setAudioDuration] = useState(0);
+  
+  const [voiceType, setVoiceType] = useState<string | null>(null);
   const [voicePrompt, setVoicePrompt] = useState('');
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const createPodcast = useMutation(api.podcasts.createPodcast)
+
+  const { toast } = useToast()
+
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),

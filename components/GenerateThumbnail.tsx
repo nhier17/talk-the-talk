@@ -80,16 +80,6 @@ const GenerateThumbnail = ({ setImage, setImageStorageId, image, imagePrompt, se
         <Button
           type="button"
           variant="plain"
-          onClick={() => setIsAiThumbnail(true)} 
-          className={cn('', {
-            'bg-black-6': isAiThumbnail
-          })}
-        >
-          Use AI to generate thumbnail
-        </Button>
-        <Button
-          type="button"
-          variant="plain"
           onClick={() => setIsAiThumbnail(false)} 
           className={cn('', {
             'bg-black-6': !isAiThumbnail
