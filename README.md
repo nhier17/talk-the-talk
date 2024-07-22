@@ -82,6 +82,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
       2. Nextjs
       3. Convex
       4. Tailwind css
+      5. OpenAI
 
  ## Framework used
        Git
