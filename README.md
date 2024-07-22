@@ -14,7 +14,7 @@ Talk the talk is  a cutting-edge fullstack application designed to revolutionize
 ## Demo
 Check out our [live demo](#) or take a look at the screenshots below to see the app in action!
 
-![Screenshot 1](#)
+![Screenshot 1](https://github.com/nhier17/talk-the-talk/blob/main/public/images/tt.png)
 ![Screenshot 2](#)
 
 ## Installation
