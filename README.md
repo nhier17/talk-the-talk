@@ -15,7 +15,7 @@ Talk the talk is  a cutting-edge fullstack application designed to revolutionize
 Check out our [live demo](#) or take a look at the screenshots below to see the app in action!
 
 ![Screenshot 1](https://github.com/nhier17/talk-the-talk/blob/main/public/images/tt.png)
-![Screenshot 2](#)
+![Screenshot 2](https://github.com/nhier17/talk-the-talk/blob/main/public/images/tt1.png)
 
 ## Installation
 To set up the Podcast Generator App locally, follow these steps:
