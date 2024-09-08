@@ -23,7 +23,7 @@ export default function RootLayout({
     <ConvexClerkProvider>
     <html lang="en">
     <AudioProvider>
-      <body suppressHydrationWarning={true} className={manrope.className}>
+      <body className={manrope.className}>
         {children}
         </body>
         </AudioProvider>
