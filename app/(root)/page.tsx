@@ -10,7 +10,6 @@ import LoaderSpinner from '@/components/LoaderSpinner';
 
 const Home = () => {
   const trendingPodcasts = useQuery(api.podcasts.getTrendingPodcasts);
-  console.log(trendingPodcasts)
   if(!trendingPodcasts) return <LoaderSpinner />
   return (
     <div className="mt-9 flex flex-col gap-9">
