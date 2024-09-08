@@ -51,12 +51,12 @@ const MobileNav = () => {
             </SheetClose>
             <div className="flex-center w-full pb-14 max-lg:px-4 lg:pr-8">
               <SignedOut>
-                <Button className="text-16 w-full bg-orange-1 font-extrabold">
+                <Button className="text-16 w-full bg-orange-1 font-extrabold text-white-1">
                   <Link href="/sign-in">Sign in</Link>
                 </Button>
               </SignedOut>
               <SignedIn>
-                <Button className="text-16 w-full bg-orange-1 font-extrabold" onClick={() => signOut(() => router.push('/'))}>
+                <Button className="text-16 w-full bg-orange-1 font-extrabold text-white-1" onClick={() => signOut(() => router.push('/'))}>
                   Log Out
                 </Button>
               </SignedIn>
