@@ -49,7 +49,7 @@ const MobileNav = () => {
                 })}
               </nav>
             </SheetClose>
-            <div className="flex-center w-full py-6 px-4">
+            <div className="flex-center w-full pb-14 px-4">
               <SignedOut>
                 <Button className="text-16 w-full bg-orange-1 font-extrabold text-white-1">
                   <Link href="/sign-in">Sign in</Link>
