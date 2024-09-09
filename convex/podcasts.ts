@@ -103,8 +103,8 @@ export const getPodcastById = query({
 // this query will get the podcasts based on the views of the podcast , which we are showing in the Trending Podcasts section.
 export const getTrendingPodcasts = query({
   handler: async (ctx) => {
-    const podcast = await ctx.db.query("podcasts").collect();
-
+    const podcast = await ctx.db.query("podcasts").order("desc").collect();
+  
     return podcast.sort((a, b) => b.views - a.views).slice(0, 8);
   },
 });
